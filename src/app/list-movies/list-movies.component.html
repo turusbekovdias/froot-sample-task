@@ -6,21 +6,30 @@
           <div class="column is-9 box">
             <div class="columns is-multiline">
               <div class="column is-2" *ngFor="let genre of genres">
-                <button class="button is-fullwidth is-normal">
+                <button class="button is-fullwidth is-normal" type="button" (click)="sortByGenre(genre)"> 
                 <h4 class="title is-4"> 
                   {{ genre }}
                 </h4>
                 </button>
               </div>
+
+              <div class="column is-2">
+                  <button class="button is-fullwidth is-normal" type="button" (click)="sortByGenre('all')"> 
+                  <h4 class="title is-4"> 
+                    All
+                  </h4>
+                  </button>
+              </div>
+
             </div>
             <div class="columns">
               <div class="column is-4">
-                  <input type="text" class="input" placeholder="search...">
+                  <input (keyup)="title$.next($event.target.value)"  type="text" class="input" placeholder="search...">
               </div>
             </div>
             <hr>
               <div class="columns is-multiline">
-                  <div class="column is-4" *ngFor='let movie of movies'>
+                  <div class="column is-4" *ngFor='let movie of moviesSorted'>
                           <div class="card" [routerLink]="['/movies', movie.id]">
                                   <div class="card-image">
                                     <figure class="image is-1by1">
@@ -44,10 +53,10 @@
                                     
                                     </div>
                                   </div>
-                                </div>
+                          </div>
                   </div>
               </div>
-                    </div>
+            </div>
         </div> 
   </div>
    

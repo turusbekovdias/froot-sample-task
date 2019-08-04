@@ -61,6 +61,30 @@
                        </div>
 
                     </div>
+
+                </div>
+
+                <div class="columns is-multiline is-centered" style="margin-top: 10px;">
+                     <div class="column is-6 box">
+                          <div class="columns is-multiline">
+                               <div class="column is-3" *ngFor="let mov of moviesSorted">
+                              <div class="card" [routerLink]="['/movies', mov.id]">
+                                   <div class="card-image">
+                                     <figure class="image is-128x128">
+                                       <img src="../../assets/images/movie-covers/{{mov.img}}" alt="Placeholder image">
+                                     </figure>
+                                   </div>
+                                   <hr>
+                                   <div class="card-content">
+                                   
+                                     <div class="content is-small">
+                                       <p class="title is-6"> 
+                                           {{ mov.name }} 
+                                       </p>
+                                     </div>
+                                   </div>
+                           </div>
+                    </div>
                 </div>
             </div>
 
