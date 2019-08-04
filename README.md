@@ -1,14 +1,19 @@
-## Technologies used
-    * @bulma css framework
-    * scss preprocessor
-    * Angular 8.2
+#### Project description
 
-## Run the project
+This project shows the list of predefined movies with the rates, genres, name etc. There is a seperate component-page for describing the details of a chosen movie. 
 
-    * Go to the root directory
-    * run `npm install`
-    * run `ng serve`
-    * open the browser at `localhost:4200`
+#### Technologies used
+
+* @bulma css framework
+* scss preprocessor
+* Angular 8.2
+
+#### Run the project
+
+* Go to the root directory
+* run `npm install`
+* run `ng serve`
+* open the browser at `localhost:4200`
 
 ## Development server
 
