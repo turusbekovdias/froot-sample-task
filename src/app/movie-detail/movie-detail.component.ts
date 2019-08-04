@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { movies } from '../../content/movie.mock-data';
+import { movies, genreType } from '../../content/movie.model';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-movie-detail',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MovieDetailComponent implements OnInit {
 
-  constructor() { }
+  movies = movies;
+  movie: any;
+  genresType = genreType;
+
+  constructor(private route: ActivatedRoute) { 
+    
+  }
 
   ngOnInit() {
+    this.route.paramMap.subscribe(params => {
+      this.movie = movies[+params.get('id') - 1];
+    });
   }
 
 }

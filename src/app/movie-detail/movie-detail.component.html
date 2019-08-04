@@ -1,1 +1,67 @@
-<p>movie-detail works!</p>
+
+<div class="section">
+        <div class="container">
+                <div class="columns is-multiline is-centered">
+                   <div class="column is-6 box">
+                       <div class="columns">
+                           <div class="column">
+                                <div class="card">
+                                        <div class="card-image">
+                                            <figure class="image is-1by1">
+                                              <img src="../../assets/images/movie-covers/{{movie.img}}" alt="Placeholder image">
+                                            </figure>
+                                        </div>
+                                </div>
+                           </div>
+                           <div class="column">
+                               <div class="level">
+                                   <div class="level-left">
+                                        Рейтинг 
+                                   </div>
+                                   <div class="level-right">
+                                        {{ movie.rate }}
+                                   </div>
+                               </div>
+                               <div class="level">
+                                   <div class="level-left">
+                                        Название
+                                   </div>
+                                   <div class="level-right">
+                                        {{ movie.name }}
+                                   </div>
+                               </div>
+                               <div class="level">
+                                   <div class="level-left">
+                                        Жанр 
+                                   </div>
+                                   <div class="level-right">
+                                        <a *ngFor="let genre of movie.genres">{{ genresType[genre] }}; </a>
+                                   </div>
+                               </div>
+                               <div class="level">
+                                   <div class="level-left">
+                                        Время 
+                                   </div>
+                                   <div class="level-right">
+                                        {{ movie.length }}
+                                   </div>
+                                </div>
+                                <hr>
+                                <h6 class="title is-6">Про фильм</h6>     
+                                <div class="columns">
+                                        <div class="column">
+                                                <div class="content">
+                                                        <p>
+                                                        {{movie.description}}
+                                                        </p>
+                                                    </div>
+                                        </div>
+                                    </div>                                      
+                           </div>
+                       </div>
+
+                    </div>
+                </div>
+            </div>
+
+</div>
