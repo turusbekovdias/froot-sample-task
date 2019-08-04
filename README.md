@@ -1,6 +1,14 @@
-# FilmsCatalog
+## Technologies used
+    * @bulma css framework
+    * scss preprocessor
+    * Angular 8.2
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
+## Run the project
+
+    * Go to the root directory
+    * run `npm install`
+    * run `ng serve`
+    * open the browser at `localhost:4200`
 
 ## Development server
 
